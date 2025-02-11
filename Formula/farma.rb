@@ -5,29 +5,29 @@
 class Farma < Formula
   desc "farma is a Farcaster notification server."
   homepage "https://github.com/vrypan/farma"
-  version "0.0.3"
+  version "0.0.5"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/vrypan/farma/releases/download/v0.0.3/farma_Darwin_x86_64.tar.gz",
+      url "https://github.com/vrypan/farma/releases/download/v0.0.5/farma_Darwin_x86_64.tar.gz",
         headers: [
           "Accept: application/octet-stream",
           "Authorization: bearer #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}"
         ]
-      sha256 "d5d1069690107d9abad5183eac4bed7345c6d982c57f8bffb7ea555409d18dad"
+      sha256 "14461a317b3a377e104290ab28c079ac92c0f5816d1772895dd04f351a89e23d"
 
       def install
         bin.install "farma"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/vrypan/farma/releases/download/v0.0.3/farma_Darwin_arm64.tar.gz",
+      url "https://github.com/vrypan/farma/releases/download/v0.0.5/farma_Darwin_arm64.tar.gz",
         headers: [
           "Accept: application/octet-stream",
           "Authorization: bearer #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}"
         ]
-      sha256 "72dfaecafe6fafe013e40a5e0bb2ad5cad005b048378dedb10abf2011adfcfcb"
+      sha256 "6bc311623c8a7f872a46e5151882bbccddfba4e43df125f4fe0676095612e724"
 
       def install
         bin.install "farma"
@@ -38,12 +38,12 @@ class Farma < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/vrypan/farma/releases/download/v0.0.3/farma_Linux_x86_64.tar.gz",
+        url "https://github.com/vrypan/farma/releases/download/v0.0.5/farma_Linux_x86_64.tar.gz",
           headers: [
             "Accept: application/octet-stream",
             "Authorization: bearer #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}"
           ]
-        sha256 "b049729b90462805a9502685200f842099a1e828028c6f5649aa6016734fda98"
+        sha256 "52e3397050e23d58c0221633770ee4fe703d86aa25d34396ae61d93dc3dd1a4c"
 
         def install
           bin.install "farma"
@@ -52,12 +52,12 @@ class Farma < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/vrypan/farma/releases/download/v0.0.3/farma_Linux_arm64.tar.gz",
+        url "https://github.com/vrypan/farma/releases/download/v0.0.5/farma_Linux_arm64.tar.gz",
           headers: [
             "Accept: application/octet-stream",
             "Authorization: bearer #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}"
           ]
-        sha256 "ea07441fa9bf012b99b07eb1e668867d06b5e87c879a89f009b8af0582c7709a"
+        sha256 "0c24f89449d020e158794a549e6e020d24a8581d27389caca3051bc704f98061"
 
         def install
           bin.install "farma"
